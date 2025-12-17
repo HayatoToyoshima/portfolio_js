@@ -55,7 +55,7 @@
 
     th {
       background: var(--theme-color);
-      color: #ffffff;
+      color: var(--theme-color);
       font-weight: 700;
     }
 
