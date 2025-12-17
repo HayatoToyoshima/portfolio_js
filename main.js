@@ -1,12 +1,14 @@
     const pages = {
       strawberry: "#ff4d4d",
       blueberry: "#4d79ff",
-      lemon: "#ffe066",
-      watermelon: "#66cc66",
-      grape: "#9966cc"
+      lemon: "#ffd84d",
+      watermelon: "#5fbf7a",
+      grape: "#9b5de5"
     };
 
-    function createCalendar() {
+    function createCalendar(themeColor) {
+      document.documentElement.style.setProperty("--theme-color", themeColor);
+
       const now = new Date();
       const year = now.getFullYear();
       const month = now.getMonth();
@@ -14,8 +16,9 @@
       const firstDay = new Date(year, month, 1).getDay();
       const lastDate = new Date(year, month + 1, 0).getDate();
 
-      let html = "<table><tr>";
       const days = ["日", "月", "火", "水", "木", "金", "土"];
+
+      let html = "<table><tr>";
       days.forEach(d => html += `<th>${d}</th>`);
       html += "</tr><tr>";
 
@@ -45,7 +48,17 @@
       createCalendar();
     }
 
-    document.querySelectorAll("button").forEach(btn => {
+    document.querySelectorAll("header button").forEach(btn => {
+      btn.addEventListener("mouseenter", () => {
+        btn.style.transform = "translateY(-4px) scale(1.05)";
+        btn.style.boxShadow = "0 10px 20px rgba(0,0,0,0.25)";
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "translateY(0) scale(1)";
+        btn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.15)";
+      });
+
       btn.addEventListener("click", () => navigate(btn.dataset.page));
     });
 
