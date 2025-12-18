@@ -9,20 +9,20 @@
 
 <form id="contactForm" novalidate>
   <div class="form-group">
-    <label for="name">氏名（カタカナ）</label>
+    <label for="name">氏名（カタカナ）<small>：カタカナ以外・未入力でバリデーション</small></label>
     <input type="text" id="name" />
     <div class="error" id="nameError"></div>
   </div>
 
   <div class="form-group">
-    <label>性別</label>
+    <label>性別<small>：未入力でバリデーション</small></label>
     <label><input type="radio" name="gender" value="male" /> 男性</label>
     <label><input type="radio" name="gender" value="female" /> 女性</label>
     <div class="error" id="genderError"></div>
   </div>
 
   <div class="form-group">
-    <label for="prefecture">都道府県</label>
+    <label for="prefecture">都道府県<small>：未選択でバリデーション</small></label>
     <select id="prefecture">
       <option value="">選択してください</option>
       <option value="北海道">北海道</option>
@@ -77,13 +77,13 @@
   </div>
 
   <div class="form-group">
-    <label for="email">メールアドレス</label>
+    <label for="email">メールアドレス<small>：不正な形式のメールアドレス・未入力でバリデーション</small></label>
     <input type="email" id="email" />
     <div class="error" id="emailError"></div>
   </div>
 
   <div class="form-group">
-    <label for="message">問い合わせ内容</label>
+    <label for="message">問い合わせ内容<small>：501文字以上・未入力でバリデーション</small></label>
     <textarea id="message" rows="5"></textarea>
     <div class="error" id="messageError"></div>
   </div>
