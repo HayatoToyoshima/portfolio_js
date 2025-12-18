@@ -48,6 +48,8 @@
       hasError = true;
     }
 
+    document.getElementById("contactForm").reset();
+
     if (!hasError) {
       alert("送信完了");
     }
