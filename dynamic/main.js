@@ -19,7 +19,9 @@ if (type) {
 }
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
-    console.log(typeValue,jobFieldValue,messageValue);
+    console.log(typeValue);
+    console.log(jobFieldValue);
+    console.log(messageValue);
     e.preventDefault();
     document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
@@ -29,17 +31,17 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       });
     }
 
-    if (typeValue === undefined) {
+    if (!typeValue) {
       document.getElementById("typeError").textContent = "お問い合わせ種別を選択してください。";
       hasError = true;
     }
 
-    if (jobFieldValue === undefined) {
+    if (typeValue && !jobFieldValue) {
       document.getElementById("jobFieldError").textContent = "希望職種を選択してください。";
       hasError = true;
     }
 
-    if (messageValue === undefined) {
+    if (!messageValue) {
       document.getElementById("messageError").textContent = "メッセージを入力してください。";
       hasError = true;
     }
