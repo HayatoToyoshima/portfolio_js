@@ -17,30 +17,29 @@ if (type) {
   });
 }
 
-if (message) {
-  message.addEventListener('input', () => {
-    count.textContent = `${message.value.length} / 100`;
-  });
-}
-
-if (!typeValue) {
-        document.getElementById("typeError").textContent = "お問い合わせ種別を選択してください。";
-        hasError = true;
-}
-
-if (!jobFieldValue) {
-        document.getElementById("jobFieldError").textContent = "希望職種を選択してください。";
-        hasError = true;
-}
-
-if (!messageValue) {
-        document.getElementById("messageError").textContent = "メッセージを入力してください。";
-        hasError = true;
-}
-
 if (!hasError) {
   document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault();
+      if (message) {
+        message.addEventListener('input', () => {
+          count.textContent = `${message.value.length} / 100`;
+        });
+      }
+
+      if (!typeValue) {
+        document.getElementById("typeError").textContent = "お問い合わせ種別を選択してください。";
+        hasError = true;
+      }
+
+      if (!jobFieldValue) {
+        document.getElementById("jobFieldError").textContent = "希望職種を選択してください。";
+        hasError = true;
+      }
+
+      if (!messageValue) {
+        document.getElementById("messageError").textContent = "メッセージを入力してください。";
+        hasError = true;
+      }
       document.getElementById("contactForm").reset();
       message.value.length = 0;
       alert("送信完了");
