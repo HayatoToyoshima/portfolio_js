@@ -30,17 +30,17 @@
         </div>
 
         <p><label>メッセージ<span class="required">(必須)</span></label></p>
-        <p><textarea class="textarea" rows="3" maxlength="100"></textarea></p>
+        <p><textarea id="message" class="textarea" rows="3" maxlength="100"></textarea></p>
         <div id="count">0 / 100</div>
 
         <p class="accordion">
-            <div class="accordion-header" id="accordionHeader">事前に伝えたいことがあればこちらをクリックして記入ください</div>
+            <div class="accordion-header" id="accordionHeader">その他特記事項があればこちらをクリックして記入ください</div>
             <div class="accordion-content" id="accordionContent">
                 <textarea class="textarea" rows="5" maxlength="500"></textarea>
             </div>
         </p>
         
-        <button type="submit">送信</button>
+        <button type="submit" class="submit-button">送信</button>
     </form>
 </div>
 <script src="main.js"></script>
