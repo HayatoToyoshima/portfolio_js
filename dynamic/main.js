@@ -19,6 +19,8 @@ if (type) {
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
+    document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
     if (message) {
       message.addEventListener('input', () => {
         count.textContent = `${message.value.length} / 100`;
