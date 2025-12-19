@@ -21,12 +21,9 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         count.textContent = `${message.value.length} / 100`;
       });
     }
-    
-    if (!hasError) {
       document.getElementById("contactForm").reset();
       message.value.length = 0;
       alert("送信完了");
-    }
 });
 
 header.addEventListener('click', () => {
