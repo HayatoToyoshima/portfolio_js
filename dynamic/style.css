@@ -1,9 +1,27 @@
     body {
       margin: 0;
-      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      color: #333;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
     }
+
     nav { margin-bottom: 20px; }
+
+    nav a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 6px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
 
     .container {
       background: #ffffff;
@@ -25,7 +43,7 @@
 
     .slider-track img {
       width: 200px;
-      height: 120px;
+      height: 200px;
     }
 
     @keyframes slideLoop {
@@ -38,7 +56,9 @@
     }
 
     .scale-image img {
-    animation: scale 4s infinite;
+      animation: scale 4s infinite;
+      width: 300px;
+      height: 300px;
     }
     @keyframes scale {
     0% { transform: scale(0.7); }
@@ -47,7 +67,7 @@
     }
 
     .fade-image img {
-    animation: fade 4s infinite;
+      animation: fade 4s infinite;
     }
     @keyframes fade {
     0% { opacity: 0; }
@@ -60,16 +80,16 @@
     .hidden { display: none; }
 
     .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .modal-content {
-    background: #fff;
-    padding: 20px;
+      background: #fff;
+      padding: 20px;
     }
 
     .accordion {
@@ -78,7 +98,6 @@
 
     .accordion-header {
       width: 500px;
-      padding: 6px;
       cursor: pointer;
     }
 
