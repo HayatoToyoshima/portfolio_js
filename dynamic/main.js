@@ -26,3 +26,9 @@ if (form) {
     }, 3000);
   });
 }
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    document.getElementById("contactForm").reset();
+    alert("送信完了");
+});
