@@ -73,3 +73,35 @@
     background: #fff;
     padding: 20px;
     }
+
+    .accordion {
+      width: 300px;
+      border: 1px solid #ccc;
+    }
+
+    .accordion-header {
+      padding: 12px;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .accordion-content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+      background: #fff;
+    }
+
+    .accordion-content ul {
+      margin: 0;
+      padding: 10px 20px;
+    }
+
+    .accordion-content li {
+      list-style: none;
+      padding: 5px 0;
+    }
+
+    .required {
+      color: red;
+    }

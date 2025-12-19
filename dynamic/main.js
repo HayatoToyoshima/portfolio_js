@@ -4,6 +4,8 @@ const message = document.getElementById('message');
 const count = document.getElementById('count');
 const form = document.getElementById('contactForm');
 const modal = document.getElementById('modal');
+const header = document.getElementById('accordionHeader');
+const content = document.getElementById('accordionContent');
 
 if (type) {
   type.addEventListener('change', () => {
@@ -30,5 +32,14 @@ if (form) {
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
     document.getElementById("contactForm").reset();
+    count.textContent = `0 / 100`;
     alert("送信完了");
+});
+
+header.addEventListener('click', () => {
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + 'px';
+  }
 });

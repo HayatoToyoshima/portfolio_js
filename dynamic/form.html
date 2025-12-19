@@ -13,7 +13,7 @@
 
 <div class="container">
     <form id="contactForm">
-        <p><label>お問い合わせ種別<small>:採用を選択すると希望職種が表示されます</small></label></p>
+        <p><label>お問い合わせ種別<span class="required">(必須)</span><small>:採用を選択すると希望職種が表示されます</small></label></p>
         <select id="type">
             <option value="">選択してください</option>
             <option value="general">一般</option>
@@ -21,7 +21,7 @@
         </select>
 
         <div id="jobField" class="hidden">
-            <p><label>希望職種</label></p>
+            <p><label>希望職種<span class="required">(必須)</span></label></p>
             <select id="type">
                 <option value="">選択してください</option>
                 <option value="triangle">△△△職</option>
@@ -29,9 +29,18 @@
             </select>
         </div>
 
-        <p><label>メッセージ</label></p>
+        <p><label>メッセージ<span class="required">(必須)</span></label></p>
         <p><textarea id="message" maxlength="100"></textarea></p>
         <div id="count">0 / 100</div>
+
+        <div class="accordion">
+            <div class="accordion-header" id="accordionHeader">事前に伝えたいことがあればこちらに記入ください</div>
+            <div class="accordion-content" id="accordionContent">
+                <ul>
+                    <li><textarea rows="5" maxlength="500"></textarea></li>
+                </ul>
+            </div>
+        </div>
         
         <button type="submit">送信</button>
     </form>
