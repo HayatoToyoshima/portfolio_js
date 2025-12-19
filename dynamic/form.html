@@ -7,40 +7,34 @@
 </head>
 <body>
 <nav>
-  <a href="index.html">株式会社〇〇とは</a> |
-  <a href="form.html">フォーム</a>
+    <a href="index.html">株式会社〇〇とは</a> |
+    <a href="form.html">フォーム</a>
 </nav>
 
-<form id="contactForm">
-  <label>
-    お問い合わせ種別<small>:採用を選択すると希望職種が表示されます</small>
-    <select id="type">
-      <option value="">選択してください</option>
-      <option value="general">一般</option>
-      <option value="job">採用</option>
-    </select>
-  </label>
+<div id="container">
+    <form id="contactForm">
+        <label>お問い合わせ種別<small>:採用を選択すると希望職種が表示されます</small></label>
+        <select id="type">
+            <option value="">選択してください</option>
+            <option value="general">一般</option>
+            <option value="job">採用</option>
+        </select>
 
-  <div id="jobField" class="hidden">
-    <label>
-      希望職種
-      <select id="type">
-        <option value="">選択してください</option>
-        <option value="triangle">△△△職</option>
-        <option value="square">□□□職</option>
-      </select>
-    </label>
-  </div>
+        <div id="jobField" class="hidden">
+            <label>希望職種</label>
+            <select id="type">
+                <option value="">選択してください</option>
+                <option value="triangle">△△△職</option>
+                <option value="square">□□□職</option>
+            </select>
+        </div>
 
-  <label>
-    メッセージ
-    <textarea id="message" maxlength="100"></textarea>
-    <div id="count">0 / 100</div>
-  </label>
-
-  <button type="submit">送信</button>
-</form>
-
+        <label>メッセージ<textarea id="message" maxlength="100"></textarea></label>
+        <div id="count">0 / 100</div>
+        
+        <button type="submit">送信</button>
+    </form>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

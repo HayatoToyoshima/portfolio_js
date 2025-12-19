@@ -1,4 +1,3 @@
-// script.js
 const type = document.getElementById('type');
 const jobField = document.getElementById('jobField');
 const message = document.getElementById('message');
