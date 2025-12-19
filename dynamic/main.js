@@ -9,7 +9,6 @@ const content = document.getElementById('accordionContent');
 const typeValue = document.getElementById("type").value;
 const jobFieldValue = document.getElementById("jobField").value;
 const messageValue = document.getElementById("message").value.trim();
-console.log(typeValue,jobFieldValue,messageValue);
 
 let hasError = false;
 
@@ -20,6 +19,7 @@ if (type) {
 }
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
+    console.log(typeValue,jobFieldValue,messageValue);
     e.preventDefault();
     document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
@@ -29,17 +29,17 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       });
     }
 
-    if (typeValue) {
+    if (typeValue === undefined) {
       document.getElementById("typeError").textContent = "お問い合わせ種別を選択してください。";
       hasError = true;
     }
 
-    if (jobFieldValue) {
+    if (jobFieldValue === undefined) {
       document.getElementById("jobFieldError").textContent = "希望職種を選択してください。";
       hasError = true;
     }
 
-    if (messageValue) {
+    if (messageValue === undefined) {
       document.getElementById("messageError").textContent = "メッセージを入力してください。";
       hasError = true;
     }
