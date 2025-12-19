@@ -19,6 +19,7 @@
             <option value="general">一般</option>
             <option value="job">採用</option>
         </select>
+        <div class="error" id="typeError"></div>
 
         <div id="jobField" class="hidden">
             <p><label>希望職種<span class="required">(必須)</span></label></p>
@@ -27,11 +28,13 @@
                 <option value="triangle">△△△職</option>
                 <option value="square">□□□職</option>
             </select>
+            <div class="error" id="jobFieldError"></div>
         </div>
 
         <p><label>メッセージ<span class="required">(必須)</span></label></p>
         <p><textarea id="message" class="textarea" rows="3" maxlength="100"></textarea></p>
         <div id="count">0 / 100</div>
+        <div class="error" id="messageError"></div>
 
         <p class="accordion">
             <div class="accordion-header" id="accordionHeader">その他特記事項があればこちらをクリックして記入ください</div>

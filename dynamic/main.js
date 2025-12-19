@@ -23,28 +23,18 @@ if (message) {
   });
 }
 
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    modal.classList.remove('hidden');
-    setTimeout(() => {
-      modal.classList.add('hidden');
-    }, 3000);
-  });
-}
-
 if (!typeValue) {
-        document.getElementById("nameError").textContent = "お問い合わせ種別を選択してください。";
+        document.getElementById("typeError").textContent = "お問い合わせ種別を選択してください。";
         hasError = true;
 }
 
 if (!jobFieldValue) {
-        document.getElementById("nameError").textContent = "希望職種を選択してください。";
+        document.getElementById("jobFieldError").textContent = "希望職種を選択してください。";
         hasError = true;
 }
 
 if (!messageValue) {
-        document.getElementById("nameError").textContent = "メッセージを入力してください。";
+        document.getElementById("messageError").textContent = "メッセージを入力してください。";
         hasError = true;
 }
 
