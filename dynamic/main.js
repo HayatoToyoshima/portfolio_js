@@ -1,6 +1,5 @@
 const type = document.getElementById('type');
 const jobField = document.getElementById('jobField');
-const message = document.getElementById('message');
 const count = document.getElementById('count');
 const form = document.getElementById('contactForm');
 const modal = document.getElementById('modal');
@@ -15,16 +14,9 @@ if (type) {
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
-
-    if (message) {
-      message.addEventListener('input', () => {
-        count.textContent = `${message.value.length} / 100`;
-      });
-    }
-      document.getElementById("contactForm").reset();
-      message.value.length = 0;
-      jobField.classList.toggle('hidden', type.value !== 'job');
-      alert("送信完了");
+    document.getElementById("contactForm").reset();
+    jobField.classList.toggle('hidden', type.value !== 'job');
+    alert("送信完了");
 });
 
 header.addEventListener('click', () => {
