@@ -5,19 +5,38 @@
     }
     nav { margin-bottom: 20px; }
 
-    .slider {
-    overflow: hidden;
-    width: 100%;
+    .container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 720px;
+      border-radius: 10px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      padding: 40px;
     }
-    .slider-track {
-    display: flex;
-    animation: slide 8s linear infinite;
-    }
-    .slider-track img { margin-right: 10px; }
 
-    @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-820px); }
+    .slider {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(200px * 8);
+      animation: slideLoop 8s linear infinite;
+    }
+
+    .slider-track img {
+      width: 200px;
+      height: 120px;
+    }
+
+    @keyframes slideLoop {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .scale-image img {
