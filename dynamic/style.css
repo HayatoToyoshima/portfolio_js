@@ -73,8 +73,7 @@
     }
 
     .accordion {
-      width: 300px;
-      border: 1px solid #ccc;
+      width: 500px;
     }
 
     .accordion-header {
@@ -98,6 +97,10 @@
     .accordion-content li {
       list-style: none;
       padding: 5px 0;
+    }
+
+    .textarea {
+      width:500px;
     }
 
     .required {
