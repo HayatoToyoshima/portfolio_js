@@ -27,17 +27,17 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       });
     }
 
-    if (!typeValue) {
+    if (typeValue != '') {
       document.getElementById("typeError").textContent = "お問い合わせ種別を選択してください。";
       hasError = true;
     }
 
-    if (!jobFieldValue) {
+    if (typeValue =='job' && jobFieldValue != '') {
       document.getElementById("jobFieldError").textContent = "希望職種を選択してください。";
       hasError = true;
     }
 
-    if (!messageValue) {
+    if (messageValue != '') {
       document.getElementById("messageError").textContent = "メッセージを入力してください。";
       hasError = true;
     }
