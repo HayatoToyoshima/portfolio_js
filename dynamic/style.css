@@ -1,8 +1,6 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      display: flex;
-      justify-content: center;
     }
 
     nav { margin-bottom: 20px; }
