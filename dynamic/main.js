@@ -23,6 +23,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     }
       document.getElementById("contactForm").reset();
       message.value.length = 0;
+      jobField.classList.toggle('hidden', type.value !== 'job');
       alert("送信完了");
 });
 
