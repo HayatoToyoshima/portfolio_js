@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Chart.js & D3.js グラフサンプル</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>Example Inc.グラフ一覧</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
-  <a href="index.html">グラフ</a>
-  <a href="responsive.html">レスポンシブ</a>
+    <h2>Example Inc.グラフ一覧</h2>
 
-  <div class="chart-container">
-    <h2>男女比（円グラフ）</h2>
-    <canvas id="pieChart"></canvas>
-  </div>
+    <div class="chart-container">
+        <h2>社員構成</h2>
+        <canvas id="pieChart"></canvas>
+    </div>
 
-  <div class="chart-container">
-    <h2>右肩上がり（棒グラフ）</h2>
-    <canvas id="barChart"></canvas>
-  </div>
+    <div class="chart-container">
+        <h2>売上推移</h2>
+        <canvas id="barChart"></canvas>
+    </div>
 
-<script src="main.js"></script>
-
+    <script src="main.js"></script>
 </body>
 </html>

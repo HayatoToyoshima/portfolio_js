@@ -33,18 +33,12 @@
     font-size: 18px;
   }
 
-  /* =====================
-     PC（5列）
-  ===================== */
   @media screen and (min-width: 960px) {
     .container {
       grid-template-columns: repeat(5, 1fr);
     }
   }
 
-  /* =====================
-     タブレット（2 + 3）
-  ===================== */
   @media screen and (min-width: 600px) and (max-width: 959px) {
     .container {
       grid-template-columns: repeat(3, 1fr);
@@ -62,9 +56,6 @@
     }
   }
 
-  /* =====================
-     スマホ（1列）
-  ===================== */
   @media screen and (max-width: 599px) {
     .container {
       grid-template-columns: 1fr;
@@ -88,16 +79,13 @@
 </div>
 
 <script>
-/* =====================
-   JavaScript（端末判定表示）
-===================== */
 function updateDeviceType() {
   const width = window.innerWidth;
   const label = document.getElementById('device-type');
 
-  if (width >= 1024) {
+  if (width >= 960) {
     label.textContent = 'PC表示（5列）';
-  } else if (width >= 768) {
+  } else if (width >= 600) {
     label.textContent = 'タブレット表示（3列）';
   } else {
     label.textContent = 'スマートフォン表示（1列）';

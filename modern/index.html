@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-gray-800 antialiased">
+    <header class="bg-white shadow fixed w-full z-10">
+      <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">Example Inc.</h1>
+        <nav class="space-x-6">
+          <a href="#about" class="hover:text-blue-600">About</a>
+          <a href="#services" class="hover:text-blue-600">Services</a>
+          <a href="#information" class="hover:text-blue-600">Information</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+            <div class="max-w-7xl mx-auto py-32 px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6">未来を創る架空のテクノロジー企業</h2>
+                <p class="text-lg mb-8">我々はデジタルの力で企業と社会の成長を支援します。</p>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-6">About Us</h3>
+                <p class="leading-relaxed">
+                Example Inc.は、モダンなWeb技術とデザインを通じて、
+                クライアントのビジネス価値を最大化することを使命としています。
+                </p>
+            </div>
+        </section>
+
+        <section id="services" class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Services</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 border rounded-xl hover:shadow-lg transition">
+                        <h4 class="text-xl font-semibold mb-4">Web Development</h4>
+                        <p>高速でスケーラブルなアプリケーションを構築します。</p>
+                    </div>
+                    <div class="p-8 border rounded-xl hover:shadow-lg transition">
+                        <h4 class="text-xl font-semibold mb-4">UI / UX Design</h4>
+                        <p>UXを重視した直感的なデザインを提供します。</p>
+                    </div>
+                    <div class="p-8 border rounded-xl hover:shadow-lg transition">
+                        <h4 class="text-xl font-semibold mb-4">Consulting</h4>
+                        <p>技術選定から運用まで、包括的にサポートします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="information" class="py-24 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-6">Information</h3>
+                <p class="leading-relaxed">外部サイトにてExample Inc.の公開情報を掲載しています。</p><br>
+                <a href="../responsive/index.html" target="_blank" class="hover:text-blue-600">公開情報はこちら</a>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-gray-900 text-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-6">Contact</h3>
+                <p class="mb-8">お気軽にご相談ください。</p>
+
+                <form id="contactForm" class="space-y-4 max-w-md mx-auto">
+                    <input
+                    id="name"
+                    type="text"
+                    placeholder="お名前"
+                    class="w-full p-3 rounded text-gray-900"
+                    />
+                    <input
+                    id="email"
+                    type="email"
+                    placeholder="メールアドレス"
+                    class="w-full p-3 rounded text-gray-900"
+                    />
+                    <textarea
+                    id="message"
+                    placeholder="お問い合わせ内容"
+                    class="w-full p-3 rounded text-gray-900"
+                    rows="4"
+                    ></textarea>
+                    <button
+                    id="button"
+                    type="submit"
+                    class="w-full bg-blue-600 py-3 rounded font-semibold hover:bg-blue-700 transition"
+                    >
+                    送信
+                    </button>
+                </form>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </main>
+
+    <footer class="bg-black text-gray-400 text-center py-6">
+        © 2025 Example Inc. All rights reserved.
+    </footer>
+  </body>
+</html>
