@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>レスポンシブレイアウト（5要素）</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* 共通 */
+  .container {
+    display: grid;
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .item {
+    background: #4e79a7;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  /* =====================
+     PC（5列）
+  ===================== */
+  @media screen and (min-width: 960px) {
+    .container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  /* =====================
+     タブレット（2 + 3）
+  ===================== */
+  @media screen and (min-width: 600px) and (max-width: 959px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item:nth-child(1),
+    .item:nth-child(2) {
+      grid-column: span 1;
+    }
+
+    .item:nth-child(3),
+    .item:nth-child(4),
+    .item:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+
+  /* =====================
+     スマホ（1列）
+  ===================== */
+  @media screen and (max-width: 599px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<h2 id="device-type">画面サイズ判定中...</h2>
+
+<div class="container">
+  <div class="item">要素 1</div>
+  <div class="item">要素 2</div>
+  <div class="item">要素 3</div>
+  <div class="item">要素 4</div>
+  <div class="item">要素 5</div>
+</div>
+
+<script>
+/* =====================
+   JavaScript（端末判定表示）
+===================== */
+function updateDeviceType() {
+  const width = window.innerWidth;
+  const label = document.getElementById('device-type');
+
+  if (width >= 1024) {
+    label.textContent = 'PC表示（5列）';
+  } else if (width >= 768) {
+    label.textContent = 'タブレット表示（3列）';
+  } else {
+    label.textContent = 'スマートフォン表示（1列）';
+  }
+}
+
+window.addEventListener('resize', updateDeviceType);
+window.addEventListener('load', updateDeviceType);
+</script>
+
+</body>
+</html>
